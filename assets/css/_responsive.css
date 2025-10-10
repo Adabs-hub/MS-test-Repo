@@ -1,3 +1,5 @@
+```css
+/* file: assets/css/_responsive.css */
 /* Mobile devices */
 @media screen and (max-width: 576px) {
   .container {
@@ -11,12 +13,41 @@
   h2 {
     font-size: 1.25rem;
   }
+
+  .book-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .book-card {
+    padding: 0.75rem;
+  }
+
+  .book-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .buy-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Tablets */
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .container {
     padding: 0.75rem;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .book-card {
+    padding: 1rem;
   }
 }
 
@@ -25,12 +56,22 @@
   .container {
     padding: 1rem;
   }
+
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 /* Desktops */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   .container {
     padding: 1.25rem;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
   }
 }
 
@@ -39,4 +80,10 @@
   .container {
     padding: 1.5rem;
   }
+
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
 }
+```

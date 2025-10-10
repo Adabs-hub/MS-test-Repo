@@ -1,3 +1,6 @@
+```css
+/* file: assets/css/styles.css */
+
 /* Import variables and responsive styles */
 @import url('./_variables.css');
 @import url('./_responsive.css');
@@ -72,11 +75,73 @@ a:hover {
   padding: var(--spacing-xl) 0;
 }
 
+/* Book Grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-column-min), 1fr));
+  gap: var(--grid-gap);
+  padding: var(--spacing-md) 0;
+}
+
+/* Book Card */
+.book-card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
+  transition: var(--btn-transition);
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--card-border-radius) - 2px);
+  margin-bottom: var(--spacing-md);
+}
+
+.book-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.book-card p {
+  color: var(--secondary-color);
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Buy Button */
+.buy-btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  background: var(--btn-background);
+  color: var(--btn-color);
+  border: none;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  transition: var(--btn-transition);
+  text-align: center;
+  width: 100%;
+}
+
+.buy-btn:hover {
+  background: var(--btn-hover-background);
+  text-decoration: none;
+  transform: scale(1.02);
+}
+
 /* Footer */
 .footer {
   padding: var(--spacing-lg) 0;
   border-top: 1px solid var(--border-color);
   text-align: center;
+  color: var(--secondary-color);
 }
 
 /* Utility classes */
@@ -88,3 +153,4 @@ a:hover {
 .mb-1 { margin-bottom: var(--spacing-md); }
 .ml-1 { margin-left: var(--spacing-md); }
 .mr-1 { margin-right: var(--spacing-md); }
+```

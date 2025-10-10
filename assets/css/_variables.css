@@ -1,3 +1,5 @@
+```css
+/* file: assets/css/_variables.css */
 :root {
   /* Color scheme */
   --primary-color: #333333;
@@ -5,7 +7,9 @@
   --background-color: #ffffff;
   --text-color: #333333;
   --link-color: #0066cc;
+  --link-hover-color: #004c99;
   --border-color: #dddddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 
   /* Typography */
   --font-family-main: 'Arial', sans-serif;
@@ -13,7 +17,10 @@
   --font-size-h1: 2rem;
   --font-size-h2: 1.5rem;
   --font-size-h3: 1.25rem;
+  --font-size-small: 0.875rem;
   --line-height-base: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -26,9 +33,36 @@
   --container-max-width: 1200px;
   --container-padding: 1rem;
 
+  /* Grid */
+  --grid-gap: 2rem;
+  --grid-column-min: 250px;
+
+  /* Card */
+  --card-padding: 1rem;
+  --card-border-radius: 8px;
+  --card-shadow: 0 2px 4px var(--shadow-color);
+  --card-background: var(--background-color);
+  --card-border: 1px solid var(--border-color);
+
+  /* Button */
+  --btn-padding: 0.75rem 1.5rem;
+  --btn-border-radius: 4px;
+  --btn-background: var(--primary-color);
+  --btn-color: var(--background-color);
+  --btn-hover-background: var(--secondary-color);
+  --btn-transition: all 0.3s ease;
+
   /* Breakpoints */
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+
+  /* Navigation */
+  --nav-height: 60px;
+  --nav-background: var(--background-color);
+  --nav-border: 1px solid var(--border-color);
+  --nav-link-color: var(--link-color);
+  --nav-link-hover-color: var(--link-hover-color);
 }
+```
