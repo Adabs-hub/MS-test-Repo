@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>The Book Nook - Your Online Bookstore</title>
     <style>
         /* Basic inline CSS for styling */
@@ -11,28 +11,42 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #333;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            width: 100%;
         }
         nav {
             background-color: #444;
             color: #fff;
             padding: 0.5rem 0;
             text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 0 1rem;
+            display: block;
+            padding: 0.8rem 1.2rem;
+            transition: background-color 0.3s;
         }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            width: 100%;
+            max-width: none;
+            padding: 2rem;
+            flex: 1;
         }
         .book-grid {
             display: grid;
@@ -72,13 +86,50 @@
             border-radius: 5px;
             display: inline-block;
             margin-top: 1rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .book-card .buy-btn:hover {
+            transform: scale(1.05);
+            background-color: #d94410;
         }
         footer {
             text-align: center;
             padding: 1rem 0;
             background-color: #333;
             color: #fff;
-            margin-top: 2rem;
+            width: 100%;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 480px) {
+            main {
+                padding: 1rem;
+            }
+            .book-grid {
+                gap: 1rem;
+            }
+            nav a {
+                padding: 0.6rem 1rem;
+            }
+            .book-card {
+                padding: 0.8rem;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            main {
+                padding: 1.5rem;
+            }
+            .book-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .book-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
         }
     </style>
 </head>
@@ -96,10 +147,9 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <main class="container">
+    <main>
         <h2>Featured Books</h2>
         <div class="book-grid">
-
             <div class="book-card">
                 <img src="https://via.placeholder.com/200x300.png?text=Book+1+Cover" alt="Book 1 Cover">
                 <h3>The Great Adventure</h3>
@@ -123,8 +173,7 @@
                 <span class="price">$25.00</span>
                 <a href="#" class="buy-btn">Buy Now</a>
             </div>
-
-            </div>
+        </div>
     </main>
 
     <footer>
