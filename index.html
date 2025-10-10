@@ -1,137 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>The Book Nook - Your Online Bookstore</title>
-    <style>
-        /* Basic inline CSS for styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-            width: 100%;
-        }
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 0.5rem 0;
-            text-align: center;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            padding: 0.8rem 1.2rem;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        main {
-            width: 100%;
-            max-width: none;
-            padding: 2rem;
-            flex: 1;
-        }
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .book-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .book-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .book-card h3 {
-            margin: 0.5rem 0;
-        }
-        .book-card p {
-            color: #666;
-            font-size: 0.9em;
-        }
-        .book-card .price {
-            font-weight: bold;
-            color: #e95420;
-            font-size: 1.2em;
-        }
-        .book-card .buy-btn {
-            background-color: #e95420;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 1rem;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        .book-card .buy-btn:hover {
-            transform: scale(1.05);
-            background-color: #d94410;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-            width: 100%;
-        }
-
-        /* Media Queries */
-        @media screen and (max-width: 480px) {
-            main {
-                padding: 1rem;
-            }
-            .book-grid {
-                gap: 1rem;
-            }
-            nav a {
-                padding: 0.6rem 1rem;
-            }
-            .book-card {
-                padding: 0.8rem;
-            }
-        }
-
-        @media screen and (min-width: 481px) and (max-width: 768px) {
-            main {
-                padding: 1.5rem;
-            }
-            .book-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-        }
-
-        @media screen and (min-width: 769px) {
-            .book-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
@@ -182,3 +56,4 @@
 
 </body>
 </html>
+```

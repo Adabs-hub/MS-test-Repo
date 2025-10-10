@@ -1,0 +1,42 @@
+/* Mobile devices */
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .container {
+    padding: 0.75rem;
+  }
+}
+
+/* Small laptops */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    padding: 1.25rem;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1201px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
