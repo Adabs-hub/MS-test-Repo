@@ -1,4 +1,3 @@
-```css
 /* file: assets/css/styles.css */
 
 /* Import variables and responsive styles */
@@ -273,4 +272,3 @@ a:hover {
 .mb-1 { margin-bottom: var(--spacing-md); }
 .ml-1 { margin-left: var(--spacing-md); }
 .mr-1 { margin-right: var(--spacing-md); }
-```
