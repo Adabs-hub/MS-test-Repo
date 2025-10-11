@@ -1,60 +1,109 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>The Book Nook - Your Online Bookstore</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Book Nook - Your online bookstore featuring fiction, non-fiction, and rare books. Browse our curated collection and find your next great read.">
+    <meta name="keywords" content="books, bookstore, fiction, non-fiction, online bookstore, literature">
+    <meta name="author" content="The Book Nook">
 
-    <header class="container">
-        <h1>The Book Nook 📚</h1>
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="The Book Nook - Your Online Bookstore">
+    <meta property="og:description" content="Discover your next great read at The Book Nook. Browse fiction, non-fiction and more.">
+    <meta property="og:image" content="assets/images/book-nook-logo.png">
+    <meta property="og:url" content="https://thebooknook.com">
+    <meta property="og:type" content="website">
+
+    <title>The Book Nook - Your Online Bookstore</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <a href="#top" id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <span class="arrow-up">↑</span>
+    </a>
+
+    <header class="container" role="banner">
+        <h1 id="top">The Book Nook 📚</h1>
         <p>Your one-stop shop for all things literary.</p>
     </header>
 
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#fiction">Fiction</a></li>
-            <li><a href="#nonfiction">Non-Fiction</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="pages/home.html" aria-current="page">Home</a></li>
+            <li><a href="pages/fiction.html">Fiction</a></li>
+            <li><a href="pages/nonfiction.html">Non-Fiction</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <main class="main container">
+    <main class="main container" role="main">
         <h2>Featured Books</h2>
-        <div class="book-grid">
-            <div class="book-card">
-                <img src="https://via.placeholder.com/200x300.png?text=Book+1+Cover" alt="Book 1 Cover">
+        <div class="book-grid" role="list">
+            <div class="book-card" role="listitem">
+                <img src="https://via.placeholder.com/200x300.png?text=Book+1+Cover" 
+                     alt="The Great Adventure book cover showing a mountain landscape" 
+                     loading="lazy">
                 <h3>The Great Adventure</h3>
                 <p>by John Doe</p>
-                <span class="price">$19.99</span>
-                <a href="#" class="buy-btn">Buy Now</a>
+                <span class="price" aria-label="Price: 19.99 dollars">$19.99</span>
+                <a href="#" class="buy-btn" aria-label="Buy The Great Adventure for $19.99">Buy Now</a>
             </div>
 
-            <div class="book-card">
-                <img src="https://via.placeholder.com/200x300.png?text=Book+2+Cover" alt="Book 2 Cover">
+            <div class="book-card" role="listitem">
+                <img src="https://via.placeholder.com/200x300.png?text=Book+2+Cover" 
+                     alt="Mysteries of the Deep book cover featuring an ocean scene"
+                     loading="lazy">
                 <h3>Mysteries of the Deep</h3>
                 <p>by Jane Smith</p>
-                <span class="price">$15.50</span>
-                <a href="#" class="buy-btn">Buy Now</a>
+                <span class="price" aria-label="Price: 15.50 dollars">$15.50</span>
+                <a href="#" class="buy-btn" aria-label="Buy Mysteries of the Deep for $15.50">Buy Now</a>
             </div>
 
-            <div class="book-card">
-                <img src="https://via.placeholder.com/200x300.png?text=Book+3+Cover" alt="Book 3 Cover">
+            <div class="book-card" role="listitem">
+                <img src="https://via.placeholder.com/200x300.png?text=Book+3+Cover" 
+                     alt="A History of Time book cover with clock imagery"
+                     loading="lazy">
                 <h3>A History of Time</h3>
                 <p>by Albert Einstein</p>
-                <span class="price">$25.00</span>
-                <a href="#" class="buy-btn">Buy Now</a>
+                <span class="price" aria-label="Price: 25.00 dollars">$25.00</span>
+                <a href="#" class="buy-btn" aria-label="Buy A History of Time for $25.00">Buy Now</a>
             </div>
         </div>
     </main>
 
-    <footer class="footer container">
-        <p>&copy; 2025 The Book Nook. All rights reserved.</p>
+    <footer class="footer container" role="contentinfo">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h4>About Us</h4>
+                <p>The Book Nook is your premier online destination for quality books.</p>
+            </div>
+            <div class="footer__section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="pages/home.html">Home</a></li>
+                    <li><a href="pages/fiction.html">Fiction</a></li>
+                    <li><a href="pages/nonfiction.html">Non-Fiction</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h4>Contact Info</h4>
+                <address>
+                    Email: <a href="mailto:info@booknook.com">info@booknook.com</a><br>
+                    Phone: <a href="tel:+1234567890">123-456-7890</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 The Book Nook. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
 </html>
+```
