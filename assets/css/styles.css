@@ -1,4 +1,4 @@
-
+```css
 /* file: assets/css/styles.css */
 
 /* Import variables and responsive styles */
@@ -18,6 +18,28 @@ body {
   line-height: var(--line-height-base);
   color: var(--text-color);
   background-color: var(--background-color);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Layout */
@@ -25,11 +47,14 @@ body {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: var(--container-padding);
+  animation: fadeIn var(--animation-duration-base) var(--animation-timing-ease);
 }
 
 /* Typography */
 h1, h2, h3 {
+  font-family: var(--font-family-headings);
   margin-bottom: var(--spacing-md);
+  letter-spacing: var(--letter-spacing-headings);
 }
 
 h1 {
@@ -52,16 +77,22 @@ p {
 a {
   color: var(--link-color);
   text-decoration: none;
+  transition: var(--btn-transition);
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--link-hover-color);
+  text-decoration: none;
 }
 
 /* Navigation */
 .nav {
   padding: var(--spacing-md) 0;
   border-bottom: 1px solid var(--border-color);
+  background: var(--nav-background);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-nav);
 }
 
 .nav__list {
@@ -70,9 +101,20 @@ a:hover {
   gap: var(--spacing-md);
 }
 
+.nav__list a {
+  padding: var(--nav-link-padding);
+  font-weight: var(--nav-font-weight);
+}
+
+.nav__list a:hover {
+  color: var(--nav-link-hover-color);
+  transform: translateY(-2px);
+}
+
 /* Main content */
 .main {
   padding: var(--spacing-xl) 0;
+  animation: fadeIn var(--animation-duration-base) var(--animation-timing-ease);
 }
 
 /* Book Grid */
@@ -91,11 +133,12 @@ a:hover {
   padding: var(--card-padding);
   box-shadow: var(--card-shadow);
   transition: var(--btn-transition);
+  animation: slideIn var(--animation-duration-base) var(--animation-timing-ease);
 }
 
 .book-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 8px var(--shadow-color);
+  transform: var(--card-hover-transform);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .book-card img {
@@ -116,6 +159,81 @@ a:hover {
   margin-bottom: var(--spacing-md);
 }
 
+/* Contact Form */
+.form-group {
+  margin: var(--form-group-margin);
+}
+
+.form-group label {
+  display: block;
+  margin: var(--label-margin);
+  font-weight: var(--font-weight-medium);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--input-padding);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  background: var(--input-background);
+  color: var(--input-text-color);
+  transition: var(--btn-transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: var(--input-focus-border);
+  outline: none;
+}
+
+.submit-button {
+  background: var(--btn-background);
+  color: var(--btn-color);
+  padding: var(--btn-padding);
+  border: none;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  transition: var(--btn-transition);
+  font-weight: var(--font-weight-medium);
+}
+
+.submit-button:hover {
+  background: var(--btn-hover-background);
+  transform: var(--btn-hover-transform);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  width: var(--back-to-top-size);
+  height: var(--back-to-top-size);
+  background: var(--back-to-top-background);
+  color: var(--back-to-top-color);
+  border-radius: var(--back-to-top-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--back-to-top-shadow);
+  transition: var(--btn-transition);
+  z-index: var(--z-index-back-to-top);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: var(--btn-hover-transform);
+  background: var(--btn-hover-background);
+}
+
 /* Buy Button */
 .buy-btn {
   display: inline-block;
@@ -128,12 +246,13 @@ a:hover {
   transition: var(--btn-transition);
   text-align: center;
   width: 100%;
+  font-weight: var(--font-weight-medium);
 }
 
 .buy-btn:hover {
   background: var(--btn-hover-background);
   text-decoration: none;
-  transform: scale(1.02);
+  transform: var(--btn-hover-transform);
 }
 
 /* Footer */
@@ -142,6 +261,7 @@ a:hover {
   border-top: 1px solid var(--border-color);
   text-align: center;
   color: var(--secondary-color);
+  background: var(--nav-background);
 }
 
 /* Utility classes */
@@ -153,3 +273,4 @@ a:hover {
 .mb-1 { margin-bottom: var(--spacing-md); }
 .ml-1 { margin-left: var(--spacing-md); }
 .mr-1 { margin-right: var(--spacing-md); }
+```

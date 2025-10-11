@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our fiction book collection">
+    <meta property="og:title" content="Fiction Books | Our Bookstore">
+    <meta property="og:description" content="Browse our fiction book collection">
+    <meta property="og:type" content="website">
+    <title>Fiction Books | Our Bookstore</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav__list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="fiction.html" aria-current="page">Fiction</a></li>
+                <li><a href="nonfiction.html">Non-Fiction</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>Fiction Books</h1>
+        <div class="category-filter">
+            <label for="genre">Filter by Genre:</label>
+            <select id="genre" aria-label="Filter books by genre">
+                <option value="all">All Genres</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="scifi">Science Fiction</option>
+                <option value="fantasy">Fantasy</option>
+            </select>
+        </div>
+
+        <section class="books-grid" aria-label="Fiction books">
+            <div class="book-card" role="article" data-genre="mystery">
+                <img src="../assets/images/mystery1.jpg" alt="Mystery book cover">
+                <h3>Mystery Title</h3>
+                <p>Author Name</p>
+                <p class="price">$24.99</p>
+            </div>
+            <!-- More book cards... -->
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your trusted source for quality books</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@bookstore.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Our Bookstore. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
