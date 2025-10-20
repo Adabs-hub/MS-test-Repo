@@ -1,8 +1,9 @@
 :root {
   /* Colors */
-  --color-primary: #e95420;
-  --color-primary-dark: #d94410;
-  --color-primary-light: #fb6d3a;
+  --color-primary: #f17c52;
+  --color-primary-dark: #e56b41; 
+  --color-primary-light: #f59a77;
+  --color-gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   --color-background: #f4f4f4;
   --color-text: #333;
   --color-text-light: #666;
@@ -12,12 +13,16 @@
   --color-gray-200: #e9ecef;
   --color-gray-300: #dee2e6;
   
+  /* Fonts */
+  --font-family-serif: 'Playfair Display', Georgia, serif;
+  --font-family-sans: 'Open Sans', Arial, sans-serif;
+  
   /* Spacing */
   --spacing-xsmall: 0.25rem;
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
-  --spacing-xlarge: 4rem;
+  --spacing-xlarge: 3rem;
   
   /* Typography */
   --font-size-base: 16px;
