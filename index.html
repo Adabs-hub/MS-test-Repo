@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>The Book Nook - Your Online Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
     <header class="header">
-        <h1>The Book Nook 📚</h1>
-        <p>Your one-stop shop for all things literary.</p>
+        <div class="container header-container">
+            <div class="brand">
+                <h1>The Book Nook 📚</h1>
+                <p>Your one-stop shop for all things literary.</p>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fiction">Fiction</a></li>
+                    <li><a href="#nonfiction">Non-Fiction</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="hero-section">
@@ -21,17 +34,6 @@
             <a href="#featured" class="buy-btn">Browse Books</a>
         </div>
     </section>
-
-    <nav class="nav-links">
-        <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#fiction">Fiction</a></li>
-                <li><a href="#nonfiction">Non-Fiction</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <main class="container">
         <h2 class="section-title" id="featured">Featured Books</h2>
