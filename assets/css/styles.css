@@ -10,18 +10,38 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--color-text);
+  font-size: var(--font-size-base);
 }
 
 .container {
   margin: 0 auto;
   width: 80%;
-  max-width: 1200px;
+  max-width: var(--container-max-width);
+  padding: 0 var(--container-padding);
 }
 
 .header {
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: var(--spacing-medium);
+  box-shadow: var(--shadow-medium);
+}
+
+.hero-section {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xlarge) 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: var(--font-size-xxlarge);
+  margin-bottom: var(--spacing-medium);
+}
+
+.hero-section p {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-large);
 }
 
 .nav-links {
@@ -29,19 +49,33 @@ body {
   align-items: center;
   justify-content: center;
   list-style: none;
-  padding: 0;
+  padding: var(--spacing-medium);
   margin: 0;
+  background: var(--color-primary-dark);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-header);
+}
+
+.nav-links li {
+  margin: 0 var(--spacing-small);
 }
 
 .nav-links a {
   color: var(--color-white);
   text-decoration: none;
   padding: var(--spacing-small) var(--spacing-medium);
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-normal);
+  border-radius: var(--border-radius-small);
 }
 
 .nav-links a:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+}
+
+.nav-links a.active {
+  background-color: var(--color-primary-light);
+  font-weight: bold;
 }
 
 .main-content {
@@ -50,27 +84,116 @@ body {
 }
 
 .section {
-  margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-xlarge);
 }
 
 .section-title {
   color: var(--color-primary);
+  margin-bottom: var(--spacing-large);
+  font-size: var(--font-size-xlarge);
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--spacing-small);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.book-grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.book-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--shadow-small);
+  padding: var(--spacing-medium);
+  transition: transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-small);
   margin-bottom: var(--spacing-medium);
 }
 
-.footer {
+.book-card h3 {
+  color: var(--color-text);
+  margin: var(--spacing-small) 0;
+  font-size: var(--font-size-large);
+}
+
+.book-card p {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-medium);
+  flex-grow: 1;
+}
+
+.buy-btn {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: var(--spacing-medium);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buy-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: var(--spacing-large) var(--spacing-medium);
   text-align: center;
   margin-top: auto;
 }
 
-.footer a {
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.footer h4 {
   color: var(--color-white);
+  margin-bottom: var(--spacing-medium);
+  font-size: var(--font-size-large);
+}
+
+.footer a {
+  color: var(--color-gray-200);
   text-decoration: none;
+  transition: color var(--transition-normal);
+  display: block;
+  margin-bottom: var(--spacing-small);
 }
 
 .footer a:hover {
+  color: var(--color-white);
   text-decoration: underline;
 }
